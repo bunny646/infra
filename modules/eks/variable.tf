@@ -1,17 +1,21 @@
 
 variable "project" {
-    description = "Project name"
-    type = string
-  
+  description = "Project name"
+  type        = string
+
 
 }
 variable "env" {
-    description = "Environment name (dev,qa,prod)"
-    type= string
+  description = "Environment name (dev,qa,prod)"
+  type        = string
 }
-variable "vpc_id"{
-     description = "Subnet IDs for EKS nodes"
-     type = string
+variable "vpc_id" {
+  description = "Subnet IDs for EKS nodes"
+  type        = string
+}
+variable "subnet_ids" {
+  description = "Subnet IDs for EKS nodes"
+  type        = list(string)
 }
 variable "kubernetes_version" {
   description = "Kubernetes version for the EKS cluster"
